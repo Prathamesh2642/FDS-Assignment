@@ -1,4 +1,3 @@
-#String with most number of letters
 a=input("Enter the string ")
 c=[]
 c=a.split()
@@ -9,13 +8,30 @@ for i in range(len(c)):
       word=c[i]
 print(f"{temp} for {word}")
 
-#Count apperance of a character
 b=input("Enter the character  ")
 count=0
 for i in a:
   if i==b:
     count=count+1
+
 print(count)
+
+#Enter substring
+c=input("Enter the substring ")
+e=0
+for i in range(len(a)-1):
+  if (a[i]==c[e]):
+    e=e+1
+    if(e==len(c)):
+      break
+  if len(c)==0:
+    break
+
+if(e<len(c)):
+  print("not present")
+else:
+  k=i-e+1
+  print(f"{c} is present at position {k}") 
 
 #To check string is palindrom or not
 a=input("Enter the string ")
